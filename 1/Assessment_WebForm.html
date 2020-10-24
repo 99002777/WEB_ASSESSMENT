@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER_WEB_FORM</title>
+    <style>
+        body{
+            background-color:rgba(102, 207, 155, 0.459);
+            text-align:center;
+        }
+        div{
+            text-align: center;
+            padding: 30px;
+            text-decoration-color: cornsilk;
+        }
+    
+     
+    </style>
+    <script>
+        
+         function PrintDetails(){
+            let name=document.getElementById("userName").value;
+            let date=document.getElementById("date").value;
+            let state=document.getElementById("option").value;
+            let text = `<p>Name: ${name}</p><p>DOB:${date}</p>`;
+            document.getElementById("printText").innerHTML = text;
+
+ 
+        }
+        
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+            <p text-decoration-color="cornsilk"> ENTER NAME:<input type="text" id="userName"></p>   
+            <p>ENTER DATE OF BIRTH:<input type="date" id="date"></p>
+            <p>
+                SELECT THE STATE :
+                <select id="option">
+                    <option >---CHOOSE ONE---</option>
+                    <option >ANDHRA PRADESH</option>
+                    <option >TELANGANA</option>
+                    <option >KARNATAKA</option>
+                    <option >CHENNAI</option>
+                </select>
+            </p>
+            <p>SELECT GENDER:
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+            </p>
+            <p><button type="button" onclick="PrintDetails()">submit</button></p>
+    
+        </div>
+    </form>
+ 
+    <div id="printText">
+ 
+    </div>
+ 
+</body>
+</html>
